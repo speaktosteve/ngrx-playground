@@ -1,0 +1,8 @@
+<div class="mb-2">
+  {{ player.name }}
+  <input
+    type="checkbox"
+    (change)="pickButtonClicked()"
+    [(ngModel)]="isChecked"
+  />
+</div>

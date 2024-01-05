@@ -1,0 +1,6 @@
+<section>
+  <p *ngIf="squad.length === 0">No players selected</p>
+  <article *ngFor="let player of squad">
+    <span>{{ player.name }}</span>
+  </article>
+</section>

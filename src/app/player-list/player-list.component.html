@@ -1,0 +1,7 @@
+<article *ngFor="let player of players">
+  <app-player
+    [player]="player"
+    (pick)="pickPlayer(player)"
+    (unPick)="unPickPlayer(player)"
+  ></app-player>
+</article>
