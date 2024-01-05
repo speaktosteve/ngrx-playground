@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IPlayer } from '../store/player.entity';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { add } from '../store/squad.actions';
+import { add, remove } from '../store/squad.actions';
 import { selectSquad } from '../store/squad.selectors';
 
 @Injectable({
@@ -39,6 +39,8 @@ export class PickerService {
   }
 
   unPickPlayer(player: IPlayer) {
+    this.store.dispatch(remove({ id: player.id }));
+
     // this.pickedPlayers = this.pickedPlayers.filter(
     //   (pickedPlayer) => pickedPlayer.id !== player.id
     // );
